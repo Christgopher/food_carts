@@ -1,0 +1,12 @@
+<div class=form>
+<form>
+  <label for="name">Name</label>
+    {{input id="name" class="form-control" value=name}}
+  <label for="foodType">Food Type</label>
+    {{input id="foodType" class="form-control" value=foodType}}
+  
+  <label for="waitTime">Wait Time</label>
+    {{input id="waitTime" class="form-control" value=waitTime}}
+  <button class="btn btn-primary" {{action 'save'}}>Add</button>
+</form>
+</div>

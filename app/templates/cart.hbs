@@ -1,0 +1,21 @@
+<h2 class="title">{{model.name}}</h2>
+<hr>
+<p><span class="title"> Wait Time: </span>{{model.waitTime}}</p>
+<p><span class="title"> Food Type: </span>{{model.foodType}}</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h4>Ratings:</h4>
+<hr>
+<ul class="list-unstyled">
+  {{#each rating in model.ratings}}
+
+  <li class="rating">{{rating.comment}} <br> {{rating.rating}} <br> by {{rating.author}}</li>
+  <br>
+  {{/each}}
+</ul>
+<p>{{#link-to 'new-rating' model.id}}Add a rating{{/link-to}}</p>
+
+{{outlet}}

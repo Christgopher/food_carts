@@ -1,0 +1,12 @@
+<div class=form>
+<form>
+
+  <label for="comment">Comment</label>
+    {{input id="comment" class="form-control" value=comment}}
+  <label for="author">Author</label>
+    {{input id="author" class="form-control" value=author}}
+    check this:
+    {{input type="checkbox" name="isAdmin" checked=rating }}
+  <button class="btn btn-primary" {{action 'save'}}>Add</button>
+</form>
+</div>

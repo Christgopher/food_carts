@@ -1,0 +1,25 @@
+body {
+  padding-top: 70px;
+}
+
+nav .active {
+    font-weight: bold;
+}
+
+.muted {
+  opacity: 0.5;
+}
+
+.title {
+   font-weight: bold;
+}
+
+.rating {
+  outline: solid;
+  padding: 5px;
+}
+
+.map-canvas {
+        height: 500px;
+        width: 500px;
+    }

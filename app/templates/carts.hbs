@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-4">
+    <h2 class="title">Food Carts on Stark</h2>
+    <hr>
+      <ul class="list-unstyled">
+        {{#each cart in model}}
+
+        <li><span class="title">{{#link-to 'cart' cart.id}}{{cart.name}}{{/link-to}}</span></li>
+        <br>
+        {{/each}}
+      </ul>
+
+      <p>{{#link-to 'new' class="btn btn-success"}}Add a New Cart{{/link-to}}
+      </p>
+    </div>
+
+
+
+<div class='col-md-4'>
+    {{outlet}}
+  </div>
+</div>

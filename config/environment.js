@@ -4,6 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'crowd-sourcing',
     environment: environment,
+    firebase: 'https://incandescent-inferno-2902.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -16,8 +17,24 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+      'font-src': "'self'",
+      'connect-src': "'self'",
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline'",
+      'frame-src': "'none'"
     }
   };
+
+  ENV.contentSecurityPolicy = {
+    'script-src': "'self' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com",
+       'img-src': "'self' https://*.googleapis.com https://*.gstatic.com",
+       'font-src': "'self' https://*.gstatic.com",
+       'style-src': "'self' 'unsafe-inline' https://*.googleapis.com"
+}
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
